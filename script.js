@@ -29,4 +29,26 @@ btnLong.addEventListener('click', () => {
 function changeContext(value) {
     html.setAttribute('data-contexto', value);
     imageElement.setAttribute('src', `/imagens/${value}.png`);
+    
+    switch (value) {
+        case 'foco':
+            titleElement.innerHTML = `
+                Otimize sua produtividade,<br>
+                <strong class="app__title-strong">mergulhe no que importa.</strong>`
+            break;
+        case 'descanso-curto':
+            titleElement.innerHTML = `
+                Que tal dar uma respirada?<br>
+                <strong class="app__title-strong">Faça uma pausa curta!</strong>`
+            break;
+        case 'descanso-longo':
+            titleElement.innerHTML = `
+                Hora de voltar à superfície.<br>
+                <strong class="app__title-strong">Faça uma pausa longa.</strong>`
+            break;            
+        default:
+            break;
+    }
+
+    
 }
